@@ -1,0 +1,23 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'net.serenity-bdd:serenity-core:2.4.4'
+    testImplementation 'net.serenity-bdd:serenity-rest-assured:2.4.4'
+    testImplementation 'io.github.fabianlinz:serenity-junit5:1.6.0'
+    testImplementation 'org.slf4j:slf4j-simple:1.7.30'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.4.2'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
+}
+
+test {
+    useJUnitPlatform()
+}
